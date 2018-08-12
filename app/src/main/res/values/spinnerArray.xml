@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="testArray">
+        <item>Stock</item>
+        <item>Rust</item>
+        <item>Creed</item>
+        <item>Aqua</item>
+        <item>Aquamarine</item>
+        <item>Adrenaline</item>
+        <item>Asphalt</item>
+        <item>Aubergine</item>
+        <item>Hay</item>
+        <item>Clementine</item>
+    </string-array>
+
+
+    <string-array name="locArray">
+        <item>South Boston</item>
+        <item>Barcelona</item>
+        <item>Sector 6</item>
+        <item>Toronto</item>
+        <item>Houston</item>
+        <item>Minneapolis</item>
+        <item>Bordeaux</item>
+        <item>Miami</item>
+        <item>Lyon</item>
+        <item>Badalona</item>
+        <item>Milan</item>
+        <item>Chula Vista</item>
+        <item>Athens</item>
+        <item>Your Location</item>
+    </string-array>
+
+    /*
+    South Boston lat=42.3334 lng=-71.0495 zoom=9
+    Barcelona lat=41.3823 lng=2.1854 zoom=12.25
+    Sector 6 lat=44.4358 lng=26.0165 zoom=10
+    Toronto lat=43.7001 lng=-79.4163 zoom=11
+    Houston lat=29.7633 lng=-95.3633 zoom=11
+    Minneapolis lat=44.9800 lng=-93.2638 zoom=10
+    Bordeaux lat=44.8404 lng=-0.5805 zoom=11
+    Miami lat=25.7743 lng=-80.1937 zoom=9
+    Lyon lat=45.7485 lng=4.8467 zoom=10
+    Badalona lat=41.4875 lng=2.1849 zoom=10
+    Milan lat=45.4643 lng=9.1895 zoom=9
+    Chula Vista lat=32.6401 lng=-117.0842 zoom=9
+    Athens lat=37.9794 lng=23.7162 zoom=9
+    Your Location
+    */
+
+</resources>
