@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'key0'
-            keyPassword 'roshan2001'
-            storeFile file('C:/Users/akhil/Desktop/MapPaperKey.jks')
-            storePassword 'roshan2001'
+
+
+
+
         }
     }
     compileSdkVersion 27
