@@ -40,7 +40,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
     private SupportMapFragment mapFragmentView;
     private TextView header, footer;
     private Spinner mSpinner;
-    public static TextView titleView;
+    public TextView titleView;
     public Button saveB, saveW;
     public Spinner locSpinner;
 
@@ -54,7 +54,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
         header = findViewById(R.id.header);
         footer = findViewById(R.id.footer);
 
-        mSpinner = (Spinner) findViewById(R.id.spinner1);
+        mSpinner = findViewById(R.id.spinner1);
         titleView =  findViewById(R.id.titleView);
         saveB =  findViewById(R.id.saveButton);
         saveW =  findViewById(R.id.saveWallpaper);
@@ -319,12 +319,12 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
             {
 
                 // TODO Auto-generated method stub
-                Bitmap bitmapW = snapshot;
+//                Bitmap bitmapW = snapshot;
 //                String filePath = System.currentTimeMillis() + ".jpeg";
 
                 WallpaperManager wallManager = WallpaperManager.getInstance(getApplicationContext());
                 try {
-                    wallManager.setBitmap(bitmapW);
+                    wallManager.setBitmap(snapshot);
                     Toast.makeText(HomeActivity.this, "Wallpaper Set Successfully!!", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     Toast.makeText(HomeActivity.this, "Setting WallPaper Failed!!", Toast.LENGTH_SHORT).show();
