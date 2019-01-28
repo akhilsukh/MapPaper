@@ -181,7 +181,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
         });
 
 
-        //SAVE BUTTON-------------------------------------------
+        //SAVE BUTTON------
         saveB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
