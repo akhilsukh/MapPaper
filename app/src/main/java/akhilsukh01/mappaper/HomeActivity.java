@@ -62,6 +62,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
 
         mapFragmentView = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapView);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        //test change for bash commit
 
 
 //        //get dimensions of screen
