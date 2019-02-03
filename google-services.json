@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "890715038156-jpblb5lju9vqvemfdehq3r4m37nrrrmd.apps.googleusercontent.com",
+          "client_id": "890715038156-hght1fbvg1kccu48tsn031fcsmnhtuht.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBmVajRamB83rfXPkBVKTt88Rc9C-Dyr6I"
+          "current_key": "AIzaSyD3sa6eJRWfpTM6XyQNWAxy0TvvSmZ7UME"
         }
       ],
       "services": {
@@ -38,12 +38,7 @@
         },
         "appinvite_service": {
           "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "890715038156-jpblb5lju9vqvemfdehq3r4m37nrrrmd.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
