@@ -62,7 +62,6 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
 
         mapFragmentView = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapView);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        //test change for bash commit 3
 
 
 //        //get dimensions of screen
@@ -114,6 +113,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
 //        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 //        mSpinner.setAdapter(myAdapter);
 
+        //test change for bash commit 4
 
         Typeface Light = Typeface.createFromAsset(getAssets(), "fonts/Montserrat-Light.ttf");
         titleView.setTypeface(Light);
