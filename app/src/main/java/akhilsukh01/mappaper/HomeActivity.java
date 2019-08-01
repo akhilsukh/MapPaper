@@ -286,9 +286,9 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        mMap.getUiSettings().setMapToolbarEnabled(false);
-        mMap.getUiSettings().setCompassEnabled(true);
-        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setMapToolbarEnabled(true);
+        mMap.getUiSettings().setCompassEnabled(false);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
         try {
             boolean success = googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json_rust));
@@ -349,36 +349,42 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
                     Log.i(TC, "Athens set");
                 }else if (i == 13) {
                     //Get location
-                    if (ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                    {
                         ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
                         ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
 
-                        return;
+//                        return;
                     }
-                    else{
-//                        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-//                        assert lm != null;
-//                        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//                        uLng = location.getLongitude();
-//                        uLat = location.getLatitude()
-                            locationTrack = new LocationTrack(HomeActivity.this);
-                            if (locationTrack.canGetLocation()) {
-                                double uLng = locationTrack.getLongitude();
-                                double uLat = locationTrack.getLatitude();
-                                googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
-                                Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
-                            } else {
-                                locationTrack.showSettingsAlert();
-                                Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
-                            }
+                    else if (ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_DENIED && ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_DENIED)
+                    {
+                        Toast.makeText(getApplicationContext(), "Give location permissions through app settings.", Toast.LENGTH_SHORT).show();
+//                        return;
                     }
+//                    else{
+////                        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+////                        assert lm != null;
+////                        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+////                        uLng = location.getLongitude();
+////                        uLat = location.getLatitude()
+//                            locationTrack = new LocationTrack(HomeActivity.this);
+//                            if (locationTrack.canGetLocation()) {
+//                                double uLng = locationTrack.getLongitude();
+//                                double uLat = locationTrack.getLatitude();
+//                                googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
+//                                Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
+//                            } else {
+//                                locationTrack.showSettingsAlert();
+//                                Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
+//                            }
+//                    }
 
                     locationTrack = new LocationTrack(HomeActivity.this);
                     if (locationTrack.canGetLocation()) {
                         double uLng = locationTrack.getLongitude();
                         double uLat = locationTrack.getLatitude();
                         googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat, uLng)));
-                        Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
 
 //                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
 //                    Log.i(TC, "You Location set");
@@ -388,40 +394,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                    //Get location
-                    if (ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-                        ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
 
-                        return;
-                    }else{
-//                        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-//                        assert lm != null;
-//                        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//                        uLng = location.getLongitude();
-//                        uLat = location.getLatitude()
-                        locationTrack = new LocationTrack(HomeActivity.this);
-                        if (locationTrack.canGetLocation()) {
-                            double uLng = locationTrack.getLongitude();
-                            double uLat = locationTrack.getLatitude();
-                            googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
-                            Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
-                        } else {
-                            locationTrack.showSettingsAlert();
-                            Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    locationTrack = new LocationTrack(HomeActivity.this);
-                    if (locationTrack.canGetLocation()) {
-                        double uLng = locationTrack.getLongitude();
-                        double uLat = locationTrack.getLatitude();
-                        googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat, uLng)));
-                        Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
-
-//                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
-//                    Log.i(TC, "You Location set");
-                }
             }
         });
 
