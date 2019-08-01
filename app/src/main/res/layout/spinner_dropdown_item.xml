@@ -7,5 +7,4 @@
     android:gravity="center"
     android:paddingStart="14dp"
     android:text="spinner_dropdown_item"
-    android:textAlignment="viewStart"
     android:textColor="@android:color/white" />
