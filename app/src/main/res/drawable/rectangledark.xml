@@ -3,11 +3,11 @@
     <item>
         <shape android:shape="rectangle">
             <solid android:color="@color/colorPrimaryDark"/>
-            <stroke android:color="@color/colorwhite"/>
+            <stroke android:color="@color/colorPrimaryDark"/>
 
             <!--corners allow us to make the rounded corners button-->
             <corners android:radius="0dp" />
-            <stroke android:width="2dp"/>
+            <stroke android:width="0dp"/>
         </shape>
     </item>
 </selector>
