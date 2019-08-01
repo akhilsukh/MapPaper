@@ -6,6 +6,6 @@
     android:background="@color/colorPrimaryDark"
     android:gravity="center"
     android:paddingStart="14dp"
-    android:text="asdasdasdasd"
+    android:text="spinner_dropdown_item"
     android:textAlignment="viewStart"
     android:textColor="@android:color/white" />
