@@ -9,8 +9,8 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,7 +38,6 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
 
     private GoogleMap mMap;
     private SupportMapFragment mapFragmentView;
-    private TextView header, footer;
     private Spinner mSpinner;
     public TextView titleView;
     public Button saveB, saveW;
@@ -51,8 +50,6 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        header = findViewById(R.id.header);
-        footer = findViewById(R.id.footer);
 
         mSpinner = findViewById(R.id.spinner1);
         titleView =  findViewById(R.id.titleView);
