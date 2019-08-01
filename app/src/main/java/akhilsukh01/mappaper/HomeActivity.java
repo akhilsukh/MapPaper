@@ -90,41 +90,31 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                GoogleMap gMap = mMap;
+
                 if (i == 0) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_adrenaline));
                 } else if (i == 1) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aqua));
                 } else if (i == 2) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aquamarine));
                 }else if (i == 3) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_asphalt));
                 }else if (i == 4) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aubergine));
                 }else if (i == 5) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_butterfinger));
                 }else if (i == 6) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_clementine));
                 }else if (i == 7) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_creed));
                 }else if (i == 8) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_hay));
                 }else if (i == 9) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_quicksilver));
                 }else if (i == 10) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_rust));
                 }else if (i == 11) {
-                    GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_stock));
                 }
             }
