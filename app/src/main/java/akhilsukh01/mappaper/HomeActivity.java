@@ -72,53 +72,11 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
 //        String screenDim = String.valueOf(screenHeight)  + "," + String.valueOf(screenWidth);
 ////        header.setText(screenDim);
         mapFragmentView.getMapAsync(this);
-        //
-//
-//        //get dimensions of fragment and change width of map to match that of screen
-//        mapFragmentView.getView().measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-//        final View mapView = mapFragmentView.getView();
-//        mapView.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                int mapWidth = mapView.getMeasuredWidth();
-//                int mapHeight = mapView.getMeasuredHeight();
-//
-//                String widthAndHeight = mapHeight + "," + mapWidth;
-//                footer.setText(widthAndHeight);
-//
-//                Double ratio = (Double.valueOf(mapHeight)/Double.valueOf(screenHeight));
-//                int newWidth = (int) (ratio*screenWidth);
-//
-//                ViewGroup.LayoutParams params = mapFragmentView.getView().getLayoutParams();
-//                params.width = newWidth;
-//                mapFragmentView.getView().setLayoutParams(params);
-//
-//                LatLng center = mMap.getCameraPosition().target;
-//                header.setText(center.toString());
-//            }
-//        });
 
 
-//        List<String> mList = new ArrayList<>();
-//        mList.add("Vintage");
-//        mList.add("Creed");
-//        mList.add("Aqua");
-//        mList.add("Pastel");
-//        mList.add("Adrenaline");
-//        mList.add("Asphalt");
-//        mList.add("Aubergine");
-
-//        mList.add("  Graphite");
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, mList);
-//        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        mSpinner.setAdapter(myAdapter);
-
-        //test change for bash commit 4
 
         Typeface Light = Typeface.createFromAsset(getAssets(), "fonts/Montserrat-Light.ttf");
         titleView.setTypeface(Light);
-        Typeface buttonFont = Typeface.createFromAsset(getAssets(), "fonts/sf_pro_display_medium.ttf");
-        saveB.setTypeface(buttonFont);
 
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.testArray, R.layout.spinner_item_intro);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
@@ -134,44 +92,40 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_stock));
-                    Log.i(TC, "themeStock set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_adrenaline));
                 } else if (i == 1) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_rust));
-                    Log.i(TC, "themeRust set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aqua));
                 } else if (i == 2) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_creed));
-                    Log.i(TC, "themeCreed set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aquamarine));
                 }else if (i == 3) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aqua));
-                    Log.i(TC, "themeAqua set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_asphalt));
                 }else if (i == 4) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aquamarine));
-                    Log.i(TC, "themeAquamarine set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aubergine));
                 }else if (i == 5) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_adrenaline));
-                    Log.i(TC, "themeAdrenaline set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_butterfinger));
                 }else if (i == 6) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_asphalt));
-                    Log.i(TC, "themeAsphalt set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_clementine));
                 }else if (i == 7) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_aubergine));
-                    Log.i(TC, "themeAubergine set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_creed));
                 }else if (i == 8) {
                     GoogleMap gMap = mMap;
                     gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_hay));
-                    Log.i(TC, "themeHay set");
                 }else if (i == 9) {
                     GoogleMap gMap = mMap;
-                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_clementine));
-                    Log.i(TC, "themeClementine set");
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_quicksilver));
+                }else if (i == 10) {
+                    GoogleMap gMap = mMap;
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_rust));
+                }else if (i == 11) {
+                    GoogleMap gMap = mMap;
+                    gMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(Objects.requireNonNull(mapFragmentView.getContext()), R.raw.style_json_stock));
                 }
             }
 
@@ -336,28 +290,6 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
         mMap.snapshot(callback);
     }
 
-//    public void openShareImageDialog(String filePath)
-//    {
-//        File file = this.getFileStreamPath(filePath);
-//
-//        if(!filePath.equals(""))
-//        {
-//            final ContentValues values = new ContentValues(2);
-//            values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
-//            values.put(MediaStore.Images.Media.DATA, file.getAbsolutePath());
-//            final Uri contentUriFile = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-//
-//            final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
-//            intent.setType("image/jpeg");
-//            intent.putExtra(android.content.Intent.EXTRA_STREAM, contentUriFile);
-//            startActivity(Intent.createChooser(intent, "Share Image"));
-//        }
-//        else
-//        {
-//            //This is a custom class I use to show dialogs...simply replace this with whatever you want to show an error message, Toast, etc.
-//            Log.i(TC, "Error Saving");
-//        }
-//    }
 
     //theming below---------------------------------------------
     @Override
@@ -444,7 +376,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
                                 double uLng = locationTrack.getLongitude();
                                 double uLat = locationTrack.getLatitude();
                                 googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
-                                Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(uLng) + "\nLatitude:" + Double.toString(uLat), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
                             } else {
                                 locationTrack.showSettingsAlert();
                                 Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
@@ -456,7 +388,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
                         double uLng = locationTrack.getLongitude();
                         double uLat = locationTrack.getLatitude();
                         googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat, uLng)));
-                        Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(uLng) + "\nLatitude:" + Double.toString(uLat), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
 
 //                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
 //                    Log.i(TC, "You Location set");
@@ -483,7 +415,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
                             double uLng = locationTrack.getLongitude();
                             double uLat = locationTrack.getLatitude();
                             googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
-                            Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(uLng) + "\nLatitude:" + Double.toString(uLat), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
                         } else {
                             locationTrack.showSettingsAlert();
                             Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
@@ -495,7 +427,7 @@ public class HomeActivity extends FragmentActivity  implements OnMapReadyCallbac
                         double uLng = locationTrack.getLongitude();
                         double uLat = locationTrack.getLatitude();
                         googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat, uLng)));
-                        Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(uLng) + "\nLatitude:" + Double.toString(uLat), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Longitude:" + (uLng) + "\nLatitude:" + (uLat), Toast.LENGTH_SHORT).show();
 
 //                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(uLat , uLng)));
 //                    Log.i(TC, "You Location set");

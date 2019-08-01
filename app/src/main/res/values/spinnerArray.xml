@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="testArray">
-        <item>Stock</item>
-        <item>Rust</item>
-        <item>Creed</item>
+        <item>Adrenaline</item>
         <item>Aqua</item>
         <item>Aquamarine</item>
-        <item>Adrenaline</item>
         <item>Asphalt</item>
         <item>Aubergine</item>
-        <item>Hay</item>
+        <item>Butterfinger</item>
         <item>Clementine</item>
+        <item>Creed</item>
+        <item>Hay</item>
+        <item>Quicksilver</item>
+        <item>Rust</item>
+        <item>Stock Blue</item>
     </string-array>
 
 
